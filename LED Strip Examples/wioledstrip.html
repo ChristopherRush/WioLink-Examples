@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.post("https://iot.seeed.cc/v1/node/GroveLedWs2812D2/clear/" + $(leds).val()+"/"+ $(this).attr("value") + "?access_token=" + $(key).val() );
+	});
+});
+</script>
+</head>
+<body>
+<img src="../../WIO Link/wiolink-logo2.png" width="50%" height="50%" alt="" title="" align="middle" />
+<h2>RGB LED Strip Test</h2>
+
+Access Key: <input type="text" id="key" value="d94f4a88ad33634cfbb80c20b76edc6a"/><br><br>
+Number of LEDs: <input type="text" id="leds" /><br><br>
+
+<h2> Hex Colour </h2><br />
+
+<table>
+	   <tr>
+	   	   <td style="width:30px" bgcolor="FFC0CB"> </td>
+		   <td>RGB 255,192,203</td>
+		   <td><button value="FFC0CB">#FFC0CB</button></td>
+		   
+		   <td style="width:30px" bgcolor="87CEFA"> </td>
+		   <td>RGB 135,206,250</td>
+		   <td><button value="87CEFA">#87CEFA</button></td>
+	   </tr>
+	   <tr>
+	   	   <td style="width:30px" bgcolor="FFB6C1"> </td>
+		   <td>RGB 255,182,193</td>
+		   <td><button value="FFB6C1">#FFB6C1</button></td>
+		   
+		   <td style="width:30px" bgcolor="00BFFF"> </td>
+		   <td>RGB 0,191,255</td>
+		   <td><button value="00BFFF">#00BFFF</button></td>
+	   </tr>
+	    <tr>
+	   	   <td style="width:30px" bgcolor="FF69B4"> </td>
+		   <td>RGB 255,105,180</td>
+		   <td><button value="FF69B4">#FF69B4</button></td>
+		   
+		   <td style="width:30px" bgcolor="1E90FF"> </td>
+		   <td>RGB 30,144,255</td>
+		   <td><button value="1E90FF">#1E90FF</button></td>
+	   </tr>
+	   <tr>
+	   	   <td style="width:30px" bgcolor="FF1493"> </td>
+		   <td>RGB 255,20,47</td>
+		   <td><button value="FF1493">#FF1493</button></td>
+		   
+		   <td style="width:30px" bgcolor="6495ED"> </td>
+		   <td>RGB 100,149,237</td>
+		   <td><button value="6495ED">#6495ED</button></td>
+	   </tr>
+	    <tr>
+	   	   <td style="width:30px" bgcolor="DB7093"> </td>
+		   <td>RGB 219,112,147</td>
+		   <td><button value="DB7093">#DB7093</button></td>
+		   
+		   <td style="width:30px" bgcolor="4169E1"> </td>
+		   <td>RGB 65,105,225</td>
+		   <td><button value="4169E1">#4169E1</button></td>
+	   </tr>
+	   <tr>
+	   	   <td style="width:30px" bgcolor="BC8F8F"> </td>
+		   <td>RGB 183,143,143</td>
+		   <td><button value="BC8F8F">#BC8F8F</button></td>
+		   
+		   <td style="width:30px" bgcolor="0000FF"> </td>
+		   <td>RGB 0,0,255</td>
+		   <td><button value="0000FF">#0000FF</button></td>
+	   </tr>
+	    <tr>
+	   	   <td style="width:30px" bgcolor="C71585"> </td>
+		   <td>RGB 199,21,133</td>
+		   <td><button value="C71585">#C71585</button></td>
+		   
+		   <td style="width:30px" bgcolor="0000CD"> </td>
+		   <td>RGB 0,0,205</td>
+		   <td><button value="0000CD">#0000CD</button></td>
+	   </tr>
+	   <tr>
+	   	   <td style="width:30px" bgcolor="CD5C5C"> </td>
+		   <td>RGB 205,92,92</td>
+		   <td><button value="CD5C5C">#CD5C5C</button></td>
+		   
+		   <td style="width:30px" bgcolor="00008B"> </td>
+		   <td>RGB 0,0,139</td>
+		   <td><button value="00008B">#00008B</button></td>
+	   </tr>
+</table>
+
+
+<!--RGB 255,255,0  <button id="test" value="ffff00">#FFFF00</button> -->
+
+</body>
+</html>
