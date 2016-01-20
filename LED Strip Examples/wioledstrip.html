@@ -5,8 +5,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-    $("button").click(function(){
-        $.post("https://iot.seeed.cc/v1/node/GroveLedWs2812D2/clear/" + $(leds).val()+"/"+ $(this).attr("value") + "?access_token=" + $(key).val() );
+    	$("button").click(function(){
+        					 $.post("https://iot.seeed.cc/v1/node/GroveLedWs2812D2/clear/" + $(leds).val()+"/"+ $(this).attr("value") + "?access_token=" + $(key).val() );
+		
 	});
 });
 </script>
@@ -29,6 +30,10 @@ Number of LEDs: <input type="text" id="leds" /><br><br>
 		   <td style="width:30px" bgcolor="87CEFA"> </td>
 		   <td>RGB 135,206,250</td>
 		   <td><button value="87CEFA">#87CEFA</button></td>
+		   
+		   <td style="width:30px" bgcolor="ADFF2F"> </td>
+		   <td>RGB 173,255,47</td>
+		   <td><button value="ADFF2F">#ADFF2F</button></td>
 	   </tr>
 	   <tr>
 	   	   <td style="width:30px" bgcolor="FFB6C1"> </td>
@@ -38,6 +43,10 @@ Number of LEDs: <input type="text" id="leds" /><br><br>
 		   <td style="width:30px" bgcolor="00BFFF"> </td>
 		   <td>RGB 0,191,255</td>
 		   <td><button value="00BFFF">#00BFFF</button></td>
+		   
+		   <td style="width:30px" bgcolor="7FFF00"> </td>
+		   <td>RGB 127,255,0</td>
+		   <td><button value="7FFF00">#7FFF00</button></td>
 	   </tr>
 	    <tr>
 	   	   <td style="width:30px" bgcolor="FF69B4"> </td>
@@ -47,6 +56,10 @@ Number of LEDs: <input type="text" id="leds" /><br><br>
 		   <td style="width:30px" bgcolor="1E90FF"> </td>
 		   <td>RGB 30,144,255</td>
 		   <td><button value="1E90FF">#1E90FF</button></td>
+		   
+		   <td style="width:30px" bgcolor="00FF00"> </td>
+		   <td>RGB 0,255,0</td>
+		   <td><button value="00FF00">#00FF00</button></td>
 	   </tr>
 	   <tr>
 	   	   <td style="width:30px" bgcolor="FF1493"> </td>
@@ -56,6 +69,10 @@ Number of LEDs: <input type="text" id="leds" /><br><br>
 		   <td style="width:30px" bgcolor="6495ED"> </td>
 		   <td>RGB 100,149,237</td>
 		   <td><button value="6495ED">#6495ED</button></td>
+		   
+		   <td style="width:30px" bgcolor="32CD32"> </td>
+		   <td>RGB 50,205,50</td>
+		   <td><button value="32CD32">#32CD32</button></td>
 	   </tr>
 	    <tr>
 	   	   <td style="width:30px" bgcolor="DB7093"> </td>
@@ -65,6 +82,10 @@ Number of LEDs: <input type="text" id="leds" /><br><br>
 		   <td style="width:30px" bgcolor="4169E1"> </td>
 		   <td>RGB 65,105,225</td>
 		   <td><button value="4169E1">#4169E1</button></td>
+		   
+		   <td style="width:30px" bgcolor="228B22"> </td>
+		   <td>RGB 34,139,34</td>
+		   <td><button value="228B22">#228B22</button></td>
 	   </tr>
 	   <tr>
 	   	   <td style="width:30px" bgcolor="BC8F8F"> </td>
@@ -74,6 +95,10 @@ Number of LEDs: <input type="text" id="leds" /><br><br>
 		   <td style="width:30px" bgcolor="0000FF"> </td>
 		   <td>RGB 0,0,255</td>
 		   <td><button value="0000FF">#0000FF</button></td>
+		   
+		   <td style="width:30px" bgcolor="008000"> </td>
+		   <td>RGB 0,128,0</td>
+		   <td><button value="008000">#008000</button></td>
 	   </tr>
 	    <tr>
 	   	   <td style="width:30px" bgcolor="C71585"> </td>
@@ -83,6 +108,10 @@ Number of LEDs: <input type="text" id="leds" /><br><br>
 		   <td style="width:30px" bgcolor="0000CD"> </td>
 		   <td>RGB 0,0,205</td>
 		   <td><button value="0000CD">#0000CD</button></td>
+		   
+		   <td style="width:30px" bgcolor="006400"> </td>
+		   <td>RGB 0,100,0</td>
+		   <td><button value="006400">#006400</button></td>
 	   </tr>
 	   <tr>
 	   	   <td style="width:30px" bgcolor="CD5C5C"> </td>
@@ -92,6 +121,10 @@ Number of LEDs: <input type="text" id="leds" /><br><br>
 		   <td style="width:30px" bgcolor="00008B"> </td>
 		   <td>RGB 0,0,139</td>
 		   <td><button value="00008B">#00008B</button></td>
+		   
+		   <td style="width:30px" bgcolor="9ACD32"> </td>
+		   <td>RGB 154,205,50</td>
+		   <td><button value="9ACD32">#9ACD32</button></td>
 	   </tr>
 </table>
 
