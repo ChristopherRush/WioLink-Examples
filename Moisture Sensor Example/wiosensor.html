@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+			setInterval(function(){ //runs the function after a period of time and repeats
+			
+        			$.get("https://iot.seeed.cc/v1/node/GroveMoistureA0/moisture?access_token="+ $(key).val(), function(data) {
+						
+						var test = data.match(/\d+/); //Removes any charactors from the string
+						var percentage = (test/1024)*100; // Converts the returned value into a percentage
+						var perc = percentage.toFixed(1); //Fixes the retruned value to within 1 decimal place
+						//alert(test);																						 
+						$(header).empty(); //Removes the previous value in the header 
+						$(header).append(perc +"%"); //writes the new percentage value to the header
+						
+						new Date($.now()); //Get current timestamp
+						var dt = new Date();
+						var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds(); //Extract time from timestamp
+						
+						$(update).empty(); //remove the previous time
+						$(update).append("Last updated:" + time); //update the field with the new time
+			}, "html");
+		
+		}, 5000); //length of time to repeat the function
+});
+</script>
+</head>
+<body>
+<img src="resources/wiolink-logo2.png" width="50%" height="50%" alt="" title="" align="middle" />
+<h2>Moisture Sensor Reading</h2>
+
+Access Key: <input type="text" id="key"/></br></br>
+<h2>Moisture level is:</h2><h2 id="header"></h2>
+
+<p id="update"></p>
+
+</body>
+</html>
